@@ -1,16 +1,16 @@
 desired_range : int = 1000
 num_list : list = []
-divisable_num_list : list = []
+multiples_num_list : list = []
 
 
-for i in range(1, desired_range) :
+for i in range(desired_range) :
     num_list.append(i)
 
 for i in num_list:
     if i % 3 == 0 or i % 5 == 0 :
-        divisable_num_list.append(i)
+        multiples_num_list.append(i)
 
-print(f"Lista de números: {divisable_num_list}")
+print(f"Lista de números: {multiples_num_list}")
 
-num_soma : int = sum(divisable_num_list)
+num_soma : int = sum(multiples_num_list)
 print(f"Soma do números: {num_soma}")
