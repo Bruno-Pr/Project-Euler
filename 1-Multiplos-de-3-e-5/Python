@@ -1,12 +1,8 @@
 desired_range : int = 1000
-num_list : list = []
 multiples_num_list : list = []
 
 
 for i in range(desired_range) :
-    num_list.append(i)
-
-for i in num_list:
     if i % 3 == 0 or i % 5 == 0 :
         multiples_num_list.append(i)
 
