@@ -8,15 +8,19 @@ for i in range(1, target_number) :
     if target_number % i == 0 :
         prime_check : int = i
         not_prime : bool = False
-        for i2 in range(2, (prime_check // 2)) :
-            if prime_check % i != 0 :
+        for i2 in range(2, prime_check) :
+            if prime_check % i2 == 0 :
                 not_prime = True
-                break
+                break                
 
         if not_prime :
             continue
 
         if i > biggest_prime_factor :
             biggest_prime_factor : int = i
+            print(f"Maior fator primo atual: {biggest_prime_factor}")
+
+        if i > target_number // 2 :
+            break
 
 print(f"Maior fator primo: {biggest_prime_factor}")
