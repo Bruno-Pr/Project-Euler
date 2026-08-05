@@ -5,6 +5,9 @@ i2 : int = 0
 
 
 for i in range(1, target_number) :
+    if i > target_number // 2 :
+        break
+
     if target_number % i == 0 :
         prime_check : int = i
         not_prime : bool = False
@@ -19,8 +22,5 @@ for i in range(1, target_number) :
         if i > biggest_prime_factor :
             biggest_prime_factor : int = i
             print(f"Maior fator primo atual: {biggest_prime_factor}")
-
-        if i > target_number // 2 :
-            break
 
 print(f"Maior fator primo: {biggest_prime_factor}")
